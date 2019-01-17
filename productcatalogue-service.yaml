@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: productcatalogue
-        image: 10.128.0.6:8081/microsvc-dev/djstockmanager:12
+        image: 10.128.0.6:8081/microsvc-dev/djproductcatalogue:13
         ports:
         - containerPort: 8020
         livenessProbe:
