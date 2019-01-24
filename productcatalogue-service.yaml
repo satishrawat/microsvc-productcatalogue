@@ -31,8 +31,21 @@ spec:
         app: productcatalogue
     spec:
       containers:
+<<<<<<< HEAD
         - image: 10.128.0.6:8081/microsvc-dev/djproductcatalogue:12
           imagePullPolicy: Always
           name: productcatalogue
           ports:
             - containerPort: 8020
+=======
+      - name: productcatalogue
+        image: 10.128.0.6:8081/microsvc-dev/djstockmanager:10
+        ports:
+        - containerPort: 8020
+        livenessProbe:
+          httpGet:
+            path: /healthcheck
+            port: 8025
+          initialDelaySeconds: 30
+          timeoutSeconds: 1
+>>>>>>> master
